@@ -1,0 +1,24 @@
+{
+  "name": "paleo",
+  "version": "1.0.0",
+  "description": "simple placeholder page",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss scss/main.scss public/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ykosinets/paleo.git"
+  },
+  "author": "ykosinets",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ykosinets/paleo/issues"
+  },
+  "homepage": "https://github.com/ykosinets/paleo#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "nodemon": "1.8.1"
+  }
+}
