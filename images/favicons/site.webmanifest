@@ -1,0 +1,19 @@
+{
+    "name": "Paleo",
+    "short_name": "Paleo",
+    "icons": [
+        {
+            "src": "/images/favicons/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/favicons/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#b7e1b8",
+    "background_color": "#b7e1b8",
+    "display": "standalone"
+}

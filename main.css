@@ -9,10 +9,13 @@ body {
   flex-direction: column;
   width: 100%; }
 
+* {
+  box-sizing: border-box; }
+
 @font-face {
   font-family: 'Industry';
-  src: url("../../fonts/industry/industry-bold.eot");
-  src: url("../../fonts/industry/industry-bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/industry/industry-bold.woff2") format("woff2"), url("../../fonts/industry/industry-bold.woff") format("woff"), url("../../fonts/industry/industry-bold.ttf") format("truetype"), url("../../fonts/industry/industry-bold.svg#industrybold") format("svg");
+  src: url("./fonts/industry/industry-bold.eot");
+  src: url("./fonts/industry/industry-bold.eot?#iefix") format("embedded-opentype"), url("./fonts/industry/industry-bold.woff2") format("woff2"), url("./fonts/industry/industry-bold.woff") format("woff"), url("./fonts/industry/industry-bold.ttf") format("truetype"), url("./fonts/industry/industry-bold.svg#industrybold") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -24,8 +27,8 @@ body {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../../fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../../fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../../fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../../fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../../fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("./fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("./fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("./fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("./fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("./fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("./fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2431,7 +2434,8 @@ main {
   main .content {
     margin: 0 auto;
     width: 100%;
-    max-width: 560px; }
+    max-width: 610px;
+    padding: 0 25px; }
   main .logo {
     display: block;
     position: relative;
@@ -2476,6 +2480,32 @@ main {
     margin-bottom: 25px; }
   main .icon-list {
     margin-bottom: 50px; }
+    main .icon-list ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-around; }
+      main .icon-list ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        main .icon-list ul li img {
+          margin-bottom: 10px; }
+          @media (max-width: 767px) {
+            main .icon-list ul li img {
+              transform: scale(0.9); } }
+        main .icon-list ul li span {
+          font-family: Industry, sans-serif;
+          font-size: 1rem;
+          font-weight: 700;
+          line-height: 1; }
+          @media (max-width: 767px) {
+            main .icon-list ul li span {
+              font-size: .8125rem; } }
 
 footer {
   height: 36px;
@@ -2485,4 +2515,10 @@ footer {
   justify-content: center;
   text-align: center;
   background: #000;
-  color: #fff; }
+  color: #fff;
+  font-size: .875rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 400; }
+  @media (max-width: 767px) {
+    footer {
+      font-size: .75rem; } }
