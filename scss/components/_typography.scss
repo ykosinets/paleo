@@ -11,7 +11,6 @@
   font-style: normal;
 }
 
-
 h1 {
   font-family: $industry;
   font-size: 3.2rem;
@@ -58,4 +57,42 @@ p {
   line-height: 1.5;
   margin-top: 0;
   margin-bottom: 25px;
+}
+
+.content{
+  a{
+    color: $brand-color;
+    text-decoration: none;
+    position: relative;
+
+    &:after{
+      content: '';
+      @extend .fs;
+      top: auto;
+      bottom: 2px;
+      border-bottom: 1px solid;
+      transform: scaleX(0);
+      will-change: transform;
+      transition: .3s transform ease-in-out;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus:hover,
+    &:active,
+    &:active:hover{
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  h1, h2, h3, h4, strong{
+    a{
+      &:after{
+        bottom: 3px;
+        border-bottom: 2px solid;
+      }
+    }
+  }
 }

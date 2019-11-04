@@ -12,6 +12,10 @@ header {
     height: 50px;
   }
 
+  @media #{$mobile-xs} {
+    padding: 0 $gap-sm;
+  }
+
   a {
     color: $secondary-color;
   }
@@ -26,7 +30,11 @@ header {
     margin: 0;
 
     @media #{$mobile} {
-      margin: 0 -$gap;
+      margin: 0 #{-$gap};
+    }
+
+    @media #{$mobile-xs} {
+      margin: 0 #{-$gap-sm};
     }
 
     li {
@@ -45,6 +53,10 @@ header {
 
         @media #{$mobile} {
           padding: 11px $gap;
+        }
+
+        @media #{$mobile-xs} {
+          padding: 11px $gap-sm;
         }
 
         &:hover,

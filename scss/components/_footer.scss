@@ -1,7 +1,7 @@
 footer {
   height: 36px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -17,7 +17,30 @@ footer {
   }
 
   @media #{$mobile-xs} {
+    padding: 10px $gap-sm;
     height: auto;
-    padding: 10px $gap;
+    font-size: .625rem;
+  }
+
+  span{
+    margin: 0 8px;
+    position: relative;
+    height: 1rem;
+
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 0;
+      height: 100%;
+      border-right: 1px solid;
+      transform: translate(0, -50%);
+    }
+
+    @media #{$mobile-xs} {
+      margin: 0 5px;
+      height: .75rem;
+    }
   }
 }

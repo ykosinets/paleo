@@ -20,7 +20,7 @@ body {
 .text-center {
   text-align: center; }
 
-.fs, header ul li a span:after, main > .background, main > .background:after {
+.fs, .content a:after, header ul li a span:after, main > .background, main > .background:after {
   position: absolute;
   top: 0;
   right: 0;
@@ -2402,6 +2402,25 @@ p {
   margin-top: 0;
   margin-bottom: 25px; }
 
+.content a {
+  color: #B7E1B8;
+  text-decoration: none;
+  position: relative; }
+  .content a:after {
+    content: '';
+    top: auto;
+    bottom: 2px;
+    border-bottom: 1px solid;
+    transform: scaleX(0);
+    will-change: transform;
+    transition: .3s transform ease-in-out; }
+  .content a:hover:after, .content a:focus:after, .content a:focus:hover:after, .content a:active:after, .content a:active:hover:after {
+    transform: scaleX(1); }
+
+.content h1 a:after, .content h2 a:after, .content h3 a:after, .content h4 a:after, .content strong a:after {
+  bottom: 3px;
+  border-bottom: 2px solid; }
+
 header {
   background: #fff;
   display: flex;
@@ -2414,6 +2433,9 @@ header {
   @media (max-width: 767px) {
     header {
       height: 50px; } }
+  @media (max-width: 413px) {
+    header {
+      padding: 0 15px; } }
   header a {
     color: #F41E14; }
   header ul {
@@ -2426,7 +2448,10 @@ header {
     margin: 0; }
     @media (max-width: 767px) {
       header ul {
-        margin: -25px; } }
+        margin: 0 -25px; } }
+    @media (max-width: 413px) {
+      header ul {
+        margin: 0 -15px; } }
     header ul li a {
       display: flex;
       flex-direction: row;
@@ -2442,6 +2467,9 @@ header {
       @media (max-width: 767px) {
         header ul li a {
           padding: 11px 25px; } }
+      @media (max-width: 413px) {
+        header ul li a {
+          padding: 11px 15px; } }
       header ul li a:hover span:after, header ul li a:focus span:after, header ul li a:focus:hover span:after, header ul li a:active span:after, header ul li a:active:hover span:after {
         transform: scaleX(0); }
       header ul li a .fa {
@@ -2465,7 +2493,7 @@ header {
 footer {
   height: 36px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -2480,8 +2508,26 @@ footer {
       font-size: .75rem; } }
   @media (max-width: 413px) {
     footer {
+      padding: 10px 15px;
       height: auto;
-      padding: 10px 25px; } }
+      font-size: .625rem; } }
+  footer span {
+    margin: 0 8px;
+    position: relative;
+    height: 1rem; }
+    footer span:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 0;
+      height: 100%;
+      border-right: 1px solid;
+      transform: translate(0, -50%); }
+    @media (max-width: 413px) {
+      footer span {
+        margin: 0 5px;
+        height: .75rem; } }
 
 main {
   flex-grow: 1;
@@ -2504,6 +2550,9 @@ main {
     width: 100%;
     max-width: 610px;
     padding: 0 25px; }
+    @media (max-width: 413px) {
+      main .content {
+        padding: 0 15px; } }
   main .logo {
     display: block;
     position: relative;
