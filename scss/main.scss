@@ -163,10 +163,14 @@ main {
     background-repeat: no-repeat;
     z-index: -1;
 
+    @media #{$mobile} {
+      background-position: 55% 50%;
+    }
+
     &:after{
       content: '';
       @extend .fs;
-      background: rgba(0,0,0,.8);
+      background: rgba($brand-black,.8);
       z-index: 1;
     }
   }
@@ -175,7 +179,7 @@ main {
     margin: 0 auto;
     width: 100%;
     max-width: 610px;
-    padding: 0 25px;
+    padding: 0 $gap;
   }
 
   .logo{
@@ -188,6 +192,7 @@ main {
 
     @media #{$mobile} {
       max-width: 170px;
+      margin: -40px auto 25px;
     }
   }
 
@@ -288,6 +293,7 @@ footer {
   font-size: .875rem;
   font-family: $roboto;
   font-weight: 400;
+  padding: 0 $gap;
 
   @media #{$mobile}{
     font-size: .75rem;

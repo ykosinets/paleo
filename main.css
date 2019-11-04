@@ -2427,9 +2427,12 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1; }
+    @media (max-width: 767px) {
+      main > .background {
+        background-position: 55% 50%; } }
     main > .background:after {
       content: '';
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(45, 34, 34, 0.8);
       z-index: 1; }
   main .content {
     margin: 0 auto;
@@ -2445,7 +2448,8 @@ main {
     max-width: 260px; }
     @media (max-width: 767px) {
       main .logo {
-        max-width: 170px; } }
+        max-width: 170px;
+        margin: -40px auto 25px; } }
   main h1 {
     font-family: Industry, sans-serif;
     font-size: 3.2rem;
@@ -2518,7 +2522,8 @@ footer {
   color: #fff;
   font-size: .875rem;
   font-family: Roboto, sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  padding: 0 25px; }
   @media (max-width: 767px) {
     footer {
       font-size: .75rem; } }
