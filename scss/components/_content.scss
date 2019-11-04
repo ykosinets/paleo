@@ -3,7 +3,7 @@ main {
   color: $white;
   position: relative;
 
-  & > .background{
+  & > .background {
     @extend .fs;
     background-size: cover;
     background-position: center;
@@ -14,15 +14,15 @@ main {
       background-position: 55% 50%;
     }
 
-    &:after{
+    &:after {
       content: '';
       @extend .fs;
-      background: rgba($brand-black,.8);
+      background: rgba($brand-black, .8);
       z-index: 1;
     }
   }
 
-  .content{
+  .content {
     margin: 0 auto;
     width: 100%;
     max-width: 610px;
@@ -33,7 +33,7 @@ main {
     }
   }
 
-  .logo{
+  .logo {
     display: block;
     position: relative;
     width: 100%;

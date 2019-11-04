@@ -59,13 +59,13 @@ p {
   margin-bottom: 25px;
 }
 
-.content{
-  a{
+.content {
+  a {
     color: $brand-color;
     text-decoration: none;
     position: relative;
 
-    &:after{
+    &:after {
       content: '';
       @extend .fs;
       top: auto;
@@ -80,16 +80,16 @@ p {
     &:focus,
     &:focus:hover,
     &:active,
-    &:active:hover{
+    &:active:hover {
       &:after {
         transform: scaleX(1);
       }
     }
   }
 
-  h1, h2, h3, h4, strong{
-    a{
-      &:after{
+  h1, h2, h3, h4, strong {
+    a {
+      &:after {
         bottom: 3px;
         border-bottom: 2px solid;
       }

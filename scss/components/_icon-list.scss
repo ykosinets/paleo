@@ -1,7 +1,7 @@
-.icon-list{
+.icon-list {
   margin-bottom: 50px;
 
-  ul{
+  ul {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -10,13 +10,13 @@
     align-items: baseline;
     justify-content: space-around;
 
-    li{
+    li {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
 
-      img{
+      img {
         margin-bottom: 10px;
 
         @media #{$mobile}{
@@ -28,7 +28,7 @@
         }
       }
 
-      span{
+      span {
         font-family: $industry;
         font-size: 1rem;
         font-weight: 700;

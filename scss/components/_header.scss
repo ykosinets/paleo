@@ -63,7 +63,7 @@ header {
         &:focus,
         &:focus:hover,
         &:active,
-        &:active:hover{
+        &:active:hover {
           span {
             &:after {
               transform: scaleX(0);
@@ -71,7 +71,7 @@ header {
           }
         }
 
-        .fa{
+        .fa {
           margin-right: 5px;
 
           @media #{$mobile} {
@@ -82,7 +82,7 @@ header {
         span {
           position: relative;
 
-          &:after{
+          &:after {
             content: '';
             @extend .fs;
             top: auto;
