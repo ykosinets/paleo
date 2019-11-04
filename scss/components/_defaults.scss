@@ -17,8 +17,11 @@ body {
   box-sizing: border-box;
 }
 
-
 *::selection {
   background: lighten($brand-color, 12%);
   color: $brand-black;
+}
+
+img {
+  user-select: none;
 }
