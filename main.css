@@ -2383,6 +2383,9 @@ header {
     list-style: none;
     padding: 0;
     margin: 0; }
+    @media (max-width: 767px) {
+      header ul {
+        margin: -25px; } }
     header ul li a {
       display: flex;
       flex-direction: row;
@@ -2397,7 +2400,7 @@ header {
       padding: 26px 0; }
       @media (max-width: 767px) {
         header ul li a {
-          padding: 11px 0; } }
+          padding: 11px 25px; } }
       header ul li a:hover span:after, header ul li a:focus span:after, header ul li a:focus:hover span:after, header ul li a:active span:after, header ul li a:active:hover span:after {
         transform: scaleX(0); }
       header ul li a .fa {
@@ -2445,7 +2448,8 @@ main {
     margin: -60px auto 25px;
     width: 100%;
     height: auto;
-    max-width: 260px; }
+    max-width: 260px;
+    pointer-events: none; }
     @media (max-width: 767px) {
       main .logo {
         max-width: 170px;
