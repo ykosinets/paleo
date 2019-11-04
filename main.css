@@ -9,7 +9,9 @@ body {
   flex-direction: column;
   width: 100%; }
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box; }
 
 .brand-color {
@@ -2373,7 +2375,7 @@ h1 {
       font-size: 4.25rem; } }
   @media (max-width: 413px) {
     h1 {
-      font-size: 3.25rem; } }
+      font-size: 3rem; } }
   @media (min-width: 768px) {
     h1 br {
       display: none; } }
@@ -2476,6 +2478,10 @@ footer {
   @media (max-width: 767px) {
     footer {
       font-size: .75rem; } }
+  @media (max-width: 413px) {
+    footer {
+      height: auto;
+      padding: 10px 25px; } }
 
 main {
   flex-grow: 1;
@@ -2501,15 +2507,17 @@ main {
   main .logo {
     display: block;
     position: relative;
-    margin: -60px auto 25px;
     width: 100%;
     height: auto;
     max-width: 260px;
-    pointer-events: none; }
+    pointer-events: none;
+    transform: translate(0, -60px);
+    margin: 0 auto -35px; }
     @media (max-width: 767px) {
       main .logo {
         max-width: 170px;
-        margin: -40px auto 25px; } }
+        margin: 0 auto -15px;
+        transform: translate(0, -40px); } }
 
 .icon-list {
   margin-bottom: 50px; }

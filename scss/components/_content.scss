@@ -32,15 +32,17 @@ main {
   .logo{
     display: block;
     position: relative;
-    margin: -60px auto 25px;
     width: 100%;
     height: auto;
     max-width: 260px;
     pointer-events: none;
+    transform: translate(0, -60px);
+    margin: 0 auto -35px;
 
     @media #{$mobile} {
       max-width: 170px;
-      margin: -40px auto 25px;
+      margin: 0 auto -15px;
+      transform: translate(0, -40px);
     }
   }
 }

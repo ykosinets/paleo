@@ -15,4 +15,9 @@ footer {
   @media #{$mobile}{
     font-size: .75rem;
   }
+
+  @media #{$mobile-xs} {
+    height: auto;
+    padding: 10px $gap;
+  }
 }
