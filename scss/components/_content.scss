@@ -1,0 +1,46 @@
+main {
+  flex-grow: 1;
+  color: $white;
+  position: relative;
+
+  & > .background{
+    @extend .fs;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @media #{$mobile} {
+      background-position: 55% 50%;
+    }
+
+    &:after{
+      content: '';
+      @extend .fs;
+      background: rgba($brand-black,.8);
+      z-index: 1;
+    }
+  }
+
+  .content{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 610px;
+    padding: 0 $gap;
+  }
+
+  .logo{
+    display: block;
+    position: relative;
+    margin: -60px auto 25px;
+    width: 100%;
+    height: auto;
+    max-width: 260px;
+    pointer-events: none;
+
+    @media #{$mobile} {
+      max-width: 170px;
+      margin: -40px auto 25px;
+    }
+  }
+}

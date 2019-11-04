@@ -1,0 +1,48 @@
+.icon-list{
+  margin-bottom: 50px;
+
+  ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+
+    li{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img{
+        margin-bottom: 10px;
+
+        @media #{$mobile}{
+          transform: scale(.9);
+        }
+
+        @media #{$mobile-xs}{
+          transform: scale(.75);
+        }
+      }
+
+      span{
+        font-family: $industry;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1;
+
+        @media #{$mobile}{
+          font-size: .8125rem;
+        }
+
+        @media #{$mobile-xs}{
+          font-size: 1rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
